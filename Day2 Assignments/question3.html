@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LetsUpgrade Javascript</title>
+</head>
+<body>
+    <script>
+        // Q3 Program to search for an element in array of String
+        let stringarray=[];
+        //initialising the array
+        let number=prompt("Enter the number of elemrnts you want in the array");
+        for(let i=0;i<number;i++)
+        {
+            stringarray[i]=prompt("Enter element at position "+(i+1));
+        }
+        console.log("The string array is:{"+stringarray+"}");
+        //We are going to use Linear search technique
+        let search=prompt("Enter the string element you want to search:");
+        let flag=-1;
+        for(let i=0;i<number;i++)
+        {
+            if(stringarray[i].match(search))
+            {
+                flag=i;
+                break;
+            }
+
+        }
+        if(flag==-1)
+        {
+            console.log("Element not found in array");
+        }
+        else
+        {
+            console.log("Element found at poition "+(flag+1));
+        }
+
+
+    </script>
+</body>
+</html>

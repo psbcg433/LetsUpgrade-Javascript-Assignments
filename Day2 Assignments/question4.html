@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>LetsUpgrade Javascript</title>
+</head>
+<body>
+    <script>
+        // Q4 Progran to display elements containg a in the array 
+        //First let us initialise our array
+        let container=[];
+        console.log("Initialising the array:::");
+        let strength=prompt("Enter the total strength of the array:");
+        for(let i=0;i<strength;i++)
+        {
+            container[i]=prompt("Enter elements at position:"+(i+1));
+        }
+
+        console.log("The array is {"+container+"}");
+        console.log("Displaying elements containig a:");
+        for(let i=0;i<strength;i++)
+        {
+            if(container[i].includes("a"))
+            {
+                console.log(container[i]);
+            }
+        }
+
+    </script>
+</body>
+</html>
