@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LetsUpgrade Javascript Day 2</title>
+</head>
+<body>
+    <script>
+    
+         //q1. Program to search particular character in a string.
+        let name=prompt("Enter The string");
+        let search=prompt("Enter The character you want to search:");
+        if(name.includes(search))
+        {
+            console.log("Character found in string");
+        }
+        else
+        {
+            console.log("Character not found in string");
+        }
+        
+         //Q2 Program to convert minutes to seconds
+        let min=prompt("Enter the time in minutes:");
+        console.log("Converting minutes to seconds....");
+        let sec=min*60;
+        console.log("The time in seconds is:"+sec);//this will print in console
+        document.write("The time in seconds is:"+sec);
+        
+         // Q3 Program to search for an element in array of String
+        let stringarray=[];
+        //initialising the array
+        let number=prompt("Enter the number of elemrnts you want in the array");
+        for(let i=0;i<number;i++)
+        {
+            stringarray[i]=prompt("Enter element at position "+(i+1));
+        }
+        console.log("The string array is:{"+stringarray+"}");
+        //We are going to use Linear search technique
+        let search=prompt("Enter the string element you want to search:");
+        let flag=-1;
+        for(let i=0;i<number;i++)
+        {
+            if(stringarray[i].match(search))
+            {
+                flag=i;
+                break;
+            }
+
+        }
+        if(flag==-1)
+        {
+            console.log("Element not found in array");
+        }
+        else
+        {
+            console.log("Element found at poition "+(flag+1));
+        }
+        
+        
+        // Q4 Progran to display elements containg a in the array 
+        //First let us initialise our array
+        let container=[];
+        console.log("Initialising the array:::");
+        let strength=prompt("Enter the total strength of the array:");
+        for(let i=0;i<strength;i++)
+        {
+            container[i]=prompt("Enter elements at position:"+(i+1));
+        }
+
+        console.log("The array is {"+container+"}");
+        console.log("Displaying elements containig a:");
+        for(let i=0;i<strength;i++)
+        {
+            if(container[i].includes("a"))
+            {
+                console.log(container[i]);
+            }
+        }
+        
+        
+        // Q5 Print an array at reverse order 
+        console.log("Initiliasing the array");
+        let numb=[];
+        let total=prompt("Enter the total number of elements in the array");
+        for(let i=0;i<total;i++)
+        {
+            numb[i]=prompt("Enter element at index "+ (i+1));
+        }
+        console.log("The array is: {"+numb+"}");
+        console.log("Printing the array in the reverse order:");
+        for(let i=total-1;i>=0;i--)
+        {
+            console.log(numb[i]);
+        }
+    </script>
+</body>
+</html>
