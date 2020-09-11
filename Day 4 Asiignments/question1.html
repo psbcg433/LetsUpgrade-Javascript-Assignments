@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 1</title>
+  </head>
+  <body>
+    <!-- Question 1: Create can website containing an image and three buttons
+                    A:On click of the second button a change the existing image to a new image
+                    B:On click of the third button change it once again
+                    C:On click of first, the first image should come back -->
+
+    <!-- CSS Files -->
+    <style>
+      .effect {
+        background-color: #4caf50;
+
+        color: white;
+        padding: 15px 50px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 12px 12px;
+        border-radius: 48px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          border: none;
+      }
+
+      .effect:hover {
+        background-color: blue;
+      }
+      .effect:active {
+        background-color: rgb(114, 0, 85);
+      }
+      .images {
+        width: 500px;
+        height: 600px;
+      }
+      .btn
+      {
+          display: inline-block;
+      }
+      .imagesrc
+      {
+          margin: 12px auto;
+          padding: 12px auto;
+      }
+    </style>
+    <div>
+      <div class="btn">
+        <button onclick="changefirst()" class="effect">Button 1</button>
+      </div>
+
+      <div class="btn">
+        <button onclick="changesecond()" class="effect">Button 2</button>
+      </div>
+      <div class="btn">
+        <button onclick="changethird()" class="effect">Button 3</button>
+      </div>
+      <br /><br />
+    </div>
+    <div class="imagesrc">
+      <img
+        src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/9fa37f68008451.5b4e19154e13c.jpg"
+        class="images"
+        alt="Paramatma Brahma"
+        title="This is an image of the first form of Paramatma.The God of creation.Prajapati Brahma"
+        id="picture"
+      />
+    </div>
+
+    <!-- Javascript files  -->
+    <script>
+      function changefirst() {
+        const dng = document.getElementById("picture");
+        dng.src =
+          "https://mir-s3-cdn-cf.behance.net/project_modules/disp/9fa37f68008451.5b4e19154e13c.jpg";
+        dng.alt = "Paramatma Brahma";
+        dng.title =
+          "This is an image of the first form of Paramatma.The God of creation.Prajapati Brahma";
+      }
+      function changesecond() {
+        const cng = document.getElementById("picture");
+        cng.src =
+          "https://i.pinimg.com/originals/b5/0a/ef/b50aef7a9723c9195ace500b587152f2.jpg";
+        cng.alt = "Paramatma Vishnu";
+        cng.title =
+          "This is an image of the second form of Paramatma.The God of persevation.Vishnu";
+      }
+      function changethird() {
+        const eng = document.getElementById("picture");
+        eng.src = "https://i.redd.it/s81jo89nej031.jpg";
+        eng.alt = "Paramatma Mahadeva Shiva";
+        eng.title =
+          "This is an image of the third frpm of Paramatma.The destroyer of evil,God of Gods,Shiva";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Question 4</title>
+</head>
+
+<body>
+    <style>
+        body
+        {
+            background-image: linear-gradient(#2193b0,#6dd5ed);
+            color: white;
+            background-repeat: no-repeat;
+            background-size: 100% 1000px;
+
+            
+        }
+    </style>
+            <!-- Question 4
+            Following the 3rd question
+            A. Write a function to display all the objects having age less than 30
+            B. Write a function to display all the objects having country India -->
+
+            <h1>Plz open the console to get answer</h1>
+
+     
+
+    <script>
+        let arr=[
+            {
+                name:"Prashnik",
+                age:18,
+                country:"India",
+                hobbies:["Photoshop Manipulation","Enviroment Designing","Digital Art","Coding","Web Devlopment"],
+            },
+            {
+                name:"Pranisha",
+                age:16,
+                country:"India",
+                hobbies:["Mandala art","Potrait sketching","Singing"],
+
+            },
+            {
+                name:"Kazi Nazrul",
+                age:45,
+                country:"Bangladesh",
+                hobbies:["Content Writing","Poetry","Reading and writing Novels"],
+            },
+            {
+                name:"Rabindra",
+                age:70,
+                country:"India",
+                hobbies:["Content writing","Poetry","Writing short stories and dramas"],
+            },
+            {
+                name:"Unmesh",
+                age:25,
+                country:"India",
+                hobbies:["Teaching Photoshop","Playing Piano","Photo retouching"],
+            },
+            {
+                name:"Nemanja",
+                age:34,
+                country:"Germany",
+                hobbies:["Teaching Photoshop","Photoshop manipulation","Photography"],
+            },
+            {
+                name:"Grant",
+                age:40,
+                country:"United Kingdom",
+                hobbies:["Teaching Blender","3d modelling","enviroment designing"],
+            }
+        ]
+        console.log("Displaying elements having age less than 30");
+        console.log("Name \t Age \t Country \t Hobbies");
+        function displayage()
+        {
+            for(let i=0;i<arr.length;i++)
+            {
+                if(arr[i].age<30)
+                {
+                    console.log(arr[i].name+"\t"+arr[i].age+"\t"+arr[i].country+"\t"+arr[i].hobbies);
+                }
+            }
+        }
+        displayage();
+        console.log("\n");
+        console.log("Displaying elements of indian origin");
+        console.log("Name \t Age \t Country \t Hobbies");
+        function displaycountry()
+        {
+            for(let i=0;i<arr.length;i++)
+            {
+                let country=arr[i].country.toLowerCase();
+                if(country.includes("india"))
+                {
+                    console.log(arr[i].name+"\t"+arr[i].age+"\t"+arr[i].country+"\t"+arr[i].hobbies);
+                }
+            }
+        }
+        displaycountry();
+        
+
+    </script>
+</body>
+
+</html>
